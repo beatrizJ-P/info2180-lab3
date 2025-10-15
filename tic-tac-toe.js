@@ -18,6 +18,18 @@ window.onload = function() {
         square.classList.add('square');
     });
 
+    board.addEventListener('mouseover', function(e) {
+        if (e.target.classList.contains('square')) {
+            e.target.classList.add('hover');
+        }
+    });
+    
+    board.addEventListener('mouseout', function(e) {
+        if (e.target.classList.contains('square')) {
+            e.target.classList.remove('hover');
+        }
+    });
+
     let play, lastPlay;
     let playerOne = 'X';
     let playerTwo = 'O';
@@ -38,6 +50,7 @@ window.onload = function() {
         };
     });
 
+    
 
 };
 
