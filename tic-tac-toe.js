@@ -50,7 +50,20 @@ window.onload = function() {
         };
     });
 
-    
+    const resetBtn = document.getElementsByClassName('btn')[0];
+
+   /* resetBtn.addEventListener('click', function() {
+        location.reload();
+    }); */
+
+    resetBtn.addEventListener('click', function() {
+        square.forEach(square => {
+            square.innerHTML = "";
+            square.classList.remove('X');
+            square.classList.remove('O');
+            lastPlay = null;
+        });
+    });
 
 };
 
